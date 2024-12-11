@@ -1,0 +1,142 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f7f7ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: #fff0f7;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #f9c8d4;
+  margin: 0;
+}
+
+button {
+  background-color: #f9c8d4;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f7b3d4;
+}
+
+#todo-input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #f1c4d4;
+  font-size: 16px;
+}
+
+#add-btn {
+  background-color: #b3e0ff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#add-btn:hover {
+  background-color: #80b3ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #f1c4d4;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e2f5ff;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #d1d1d1;
+}
+
+/* Cloud animations */
+.clouds {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.cloud {
+  font-size: 40px;
+  animation: cloudMove 5s ease-in-out infinite;
+}
+
+.cloud:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.cloud:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.cloud:nth-child(4) {
+  animation-delay: 3s;
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
